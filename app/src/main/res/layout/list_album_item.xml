@@ -91,7 +91,6 @@
                 android:layout_marginTop="8dp"
                 android:ellipsize="end"
                 android:maxLines="2"
-                android:textAllCaps="true"
                 android:textColor="@color/dark_gray"
                 app:layout_constraintLeft_toRightOf="@+id/image_album_art"
                 app:layout_constraintRight_toRightOf="parent"
