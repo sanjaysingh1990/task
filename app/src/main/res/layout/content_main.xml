@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   >
+
+      <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_bg"
+        android:orientation="vertical">
+
+          <android.support.design.widget.TabLayout
+              android:id="@+id/tabLayout"
+              android:layout_width="0dp"
+              android:layout_height="65dp"
+              android:background="@color/white"
+              android:elevation="5dp"
+              app:tabIndicatorHeight="4dp"
+              app:tabSelectedTextColor="@color/colorPrimary"
+              app:tabIndicatorColor="@color/colorPrimary"
+              app:layout_constraintHorizontal_bias="0.0"
+              app:layout_constraintLeft_toLeftOf="parent"
+              app:layout_constraintRight_toRightOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/inner_constraint">
+
+              <android.support.design.widget.TabItem
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/videos"
+                  android:icon="@drawable/tab1_selector"
+
+                  />
+
+              <android.support.design.widget.TabItem
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/images"
+                  android:icon="@drawable/tab2_selector"
+
+                  />
+
+              <android.support.design.widget.TabItem
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/milestone"
+                  android:icon="@drawable/tab3_selector"
+
+                  />
+          </android.support.design.widget.TabLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tabLayout"
+            app:layout_constraintVertical_bias="0.0"
+            android:layout_margin="10dp"
+            />
+
+          <android.support.constraint.ConstraintLayout
+             android:id="@+id/inner_constraint"
+              android:layout_width="0dp"
+              android:layout_height="100dp"
+              app:layout_constraintLeft_toLeftOf="parent"
+              app:layout_constraintRight_toRightOf="parent"
+              app:layout_constraintTop_toTopOf="parent" >
+
+              <android.support.v4.view.ViewPager
+                  android:id="@+id/viewpager"
+                   android:layout_width="0dp"
+                  android:layout_height="0dp"
+                  app:layout_constraintLeft_toLeftOf="parent"
+                  app:layout_constraintRight_toRightOf="parent"
+                  app:layout_constraintTop_toTopOf="parent"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  />
+
+              <View
+                  android:layout_width="0dp"
+                  android:layout_height="80dp"
+                  android:background="@drawable/item_bottom_shadow"
+                  app:layout_constraintRight_toRightOf="parent"
+                  app:layout_constraintLeft_toLeftOf="parent"
+                  app:layout_constraintHorizontal_bias="0.0"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  android:id="@+id/view"
+                  android:visibility="invisible"
+                  android:layout_marginBottom="4dp" />
+              <ImageView
+                  android:id="@+id/image_player"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  app:srcCompat="@mipmap/play"
+                  android:layout_marginLeft="8dp"
+                  app:layout_constraintLeft_toLeftOf="@+id/view"
+                  app:layout_constraintTop_toTopOf="@+id/view"
+                  android:layout_marginTop="0dp"
+                  android:layout_marginBottom="16dp"
+                  app:layout_constraintVertical_bias="1.0"
+                  app:layout_constraintBottom_toBottomOf="@+id/view"
+                  android:layout_marginStart="8dp"
+                  android:clickable="true"
+                  />
+
+              <TextView
+                  android:id="@+id/txt_title"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:text="TextView"
+                  android:textColor="@color/white"
+                  app:layout_constraintLeft_toRightOf="@+id/image_player"
+                  android:layout_marginLeft="8dp"
+                  app:layout_constraintTop_toTopOf="@+id/image_player"
+                  android:layout_marginTop="5dp"
+                  app:layout_constraintBottom_toBottomOf="@+id/image_player"
+                  android:layout_marginBottom="20dp"
+                  android:maxLines="1"
+                  android:ellipsize="end"
+                  android:layout_marginStart="8dp"
+                  android:layout_marginRight="8dp"
+                  app:layout_constraintRight_toRightOf="parent"
+                  android:layout_marginEnd="8dp"
+                  app:layout_constraintHorizontal_bias="0.0" />
+
+              <TextView
+                  android:id="@+id/txt_subtitle"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:text="TextView"
+                  android:textColor="@color/white"
+                  android:textSize="11sp"
+                  android:maxLines="1"
+                  android:ellipsize="end"
+                  app:layout_constraintLeft_toRightOf="@+id/image_player"
+                  android:layout_marginLeft="8dp"
+                  app:layout_constraintBottom_toBottomOf="@+id/image_player"
+                  app:layout_constraintTop_toBottomOf="@+id/txt_title"
+                  android:layout_marginStart="8dp"
+                  android:layout_marginRight="8dp"
+                  app:layout_constraintRight_toRightOf="@+id/view"
+                  android:layout_marginEnd="8dp" />
+
+
+              />
+
+              <LinearLayout
+                  android:id="@+id/viewPagerCountDots"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_centerHorizontal="true"
+                  android:gravity="center"
+                  android:orientation="horizontal"
+                  app:layout_constraintLeft_toLeftOf="parent"
+                  app:layout_constraintRight_toRightOf="parent"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  android:layout_marginBottom="7dp"
+                  >
+
+
+              </LinearLayout>
+
+              </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+</layout>
