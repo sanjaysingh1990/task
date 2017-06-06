@@ -15,5 +15,8 @@
     <string name="time">20 Hours AGO</string>
     <string name="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
     <string name="home">HOME</string>
+    <string name="no_category_available">No Category Available!</string>
+    <string name="retry">RETRY</string>
+    <string name="no_internet_connecton">No internet, Please check your connection</string>
 
 </resources>

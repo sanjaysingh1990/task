@@ -6,8 +6,8 @@
     <data>
 
         <variable
-            name="launcheractivity"
-            type="com.test.sanjay.task.MainActivity" />
+            name="radioActivity"
+            type="com.test.sanjay.task.RadioActivity" />
 
     </data>
 
@@ -23,13 +23,9 @@
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
             tools:context="com.learn2crack.myapplication.MainActivity">
-
-
-
             <include
                 android:id="@+id/main_content"
                 layout="@layout/content_player"
-
                 />
 
         </android.support.design.widget.CoordinatorLayout>
@@ -40,10 +36,24 @@
             android:layout_height="match_parent"
             android:layout_gravity="start"
             android:background="#00000000">
+            <include
+                android:id="@+id/left_drawer_content"
+                layout="@layout/drawer_list_items"
+                />
+        </android.support.design.widget.NavigationView>
+
+
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/navigation_view2"
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="#00000000">
 
             <include
-                android:id="@+id/main_content"
-                layout="@layout/drawer_list_items"
+                android:id="@+id/right_drawer_content"
+                layout="@layout/drawer_list_items2"
 
                 />
         </android.support.design.widget.NavigationView>
